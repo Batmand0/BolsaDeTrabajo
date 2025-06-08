@@ -1,0 +1,149 @@
+﻿@model HorarioModel
+
+@{
+    ViewData["Title"] = "Crear Horario";
+}
+<div class="Encabezado">
+    <div class="row">
+        <div class="text-center">
+            <h1>Instituto Tecnologico de Mexicali</h1>
+            <h3>Bolsa de Trabajo</h3>
+            <h5>Catalogo de Horario</h5>
+        </div>
+        <div class="text-end">
+            <p>Fecha: @DateTime.Now.ToString("dd/MM/yyyy")</p>
+            <p>Hora: @DateTime.Now.ToString("HH:mm tt")</p>
+        </div>
+    </div>
+</div>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+@if (ViewData.ModelState[""]?.Errors.Count > 0)
+{
+    <div class="alert alert-danger">
+        @ViewData.ModelState[""].Errors[0].ErrorMessage
+    </div>
+}
+
+<form method="post">
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="Clave"></label>
+            <input id="Clave" class="form-control mt-2" asp-for="Clave" type="text" onblur="getDatos();"/>
+            <span asp-validation-for="Clave" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="HoraEntrada"></label>
+            <input id="HoraEntrada" class="form-control mt-2" asp-for="HoraEntrada" type="time" />
+            <span asp-validation-for="HoraEntrada" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="HoraSalida"></label>
+            <input id="HoraSalida" class="form-control mt-2" asp-for="HoraSalida" type="time" />
+            <span asp-validation-for="HoraSalida" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="DiaSemana"></label>
+            <input id="DiaSemana" class="form-control mt-2" asp-for="DiaSemana" type="number" />
+            <span asp-validation-for="DiaSemana" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="HoraSemana1"></label>
+            <input id="HoraSemana" class="form-control mt-2" asp-for="HoraSemana1" type="text" readonly />
+            <span asp-validation-for="HoraSemana1" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <div class="row">
+            <div class="col-3">
+                <button type="submit" name="action" value="alta" class="btn btn-success px-3">Alta</button>
+            </div>
+            <div class="col-3">
+                <button type="submit" name="action" value="baja" class="btn btn-danger px-3">Baja</button>
+            </div>
+            <div class="col-3">
+                <button type="submit" name="action" value="modificar" class="btn btn-secondary px-3">Modificar</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const horaEntradaInput = document.getElementById('HoraEntrada');
+        const horaSalidaInput = document.getElementById('HoraSalida');
+        const diaSemanaInput = document.getElementById('DiaSemana');
+        const horaSemanaInput = document.getElementById('HoraSemana');
+
+        function calcularHorasTotales() {
+            const horaEntrada = horaEntradaInput.value;
+            const horaSalida = horaSalidaInput.value;
+            const diasSemana = parseInt(diaSemanaInput.value, 10);
+
+            if (horaEntrada && horaSalida && !isNaN(diasSemana)) {
+                const [horasEntrada, minutosEntrada] = horaEntrada.split(':').map(Number);
+                const [horasSalida, minutosSalida] = horaSalida.split(':').map(Number);
+
+                const entrada = new Date();
+                entrada.setHours(horasEntrada, minutosEntrada, 0, 0);
+
+                const salida = new Date();
+                salida.setHours(horasSalida, minutosSalida, 0, 0);
+
+                let diferencia = (salida - entrada) / 1000 / 60; // Diferencia en minutos
+
+                if (diferencia < 0) {
+                    diferencia += 24 * 60; // Ajuste si la hora de salida es al día siguiente
+                }
+
+                // Multiplica la diferencia por el número de días de la semana
+                const totalMinutos = diferencia * diasSemana;
+
+                // Convierte los minutos totales a horas
+                const totalHoras = totalMinutos / 60;
+
+                // Muestra el total en horas (redondeado a dos decimales)
+                horaSemanaInput.value = totalHoras.toFixed(2);
+            }
+        }
+
+        horaEntradaInput.addEventListener('change', calcularHorasTotales);
+        horaSalidaInput.addEventListener('change', calcularHorasTotales);
+        diaSemanaInput.addEventListener('input', calcularHorasTotales);
+
+        // Calcula el valor inicial si ya hay valores en los campos
+        calcularHorasTotales();
+    });
+
+    async function getDatos() {
+        const clave = document.getElementById('Clave').value; // Obtiene el valor de la clave del campo
+        if (clave) { // Si la clave no está vacía
+            try {
+                // Realiza la solicitud al servidor con la clave
+                const response = await fetch(`/Horario/GetDatos?Clave=${clave}`);
+
+                if (response.ok) {
+                    const data = await response.json();
+                    // Si se encuentra una descripción, llena el campo de descripción
+                    if (data) {
+                        document.getElementById('HoraSemana').value = data.descripcion;
+                        document.getElementById('HoraEntrada').value = data.descripcion;
+                        document.getElementById('HoraSalida').value = data.descripcion;
+                        document.getElementById('DiaSemana').value = data.descripcion;
+                    } else {
+                        document.getElementById('HoraSemana').value = ''; // Si no encuentra descripción, vacía el campo
+                        document.getElementById('HoraEntrada').value = '';
+                        document.getElementById('HoraSalida').value = '';
+                        document.getElementById('DiaSemana').value = '';
+                    }
+                } else {
+                    console.error("Error en la respuesta del servidor");
+                }
+            } catch (error) {
+                console.error("Error en la solicitud", error);
+            }
+        }
+    }
+</script>

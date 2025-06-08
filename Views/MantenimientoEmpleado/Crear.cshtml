@@ -1,0 +1,160 @@
+﻿@model MantenimientoEmpleadoViewModel
+
+
+@{
+    ViewData["Title"] = "Dar registro a empleado";
+}
+
+<div class="text-center my-3">
+    <h1>Mantenimiento de Empleado</h1>
+    <p class="text-muted">Utiliza este formulario para gestionar los empleados de la bolsa de trabajo.</p>
+</div>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<main class="container-fluid p-0">
+
+    <form method="post">
+        <section class="row border shadow bg-gradient text-white" style="background-color: #133E87">
+            <div class="col-3">
+                <img src="@Url.Content("~/images/MenuCatalogos/Experiencia.jpg")" alt="Demostración" class="img-fluid w-100 rounded-0" style="object-fit: cover; height: 100%;" />
+            </div>
+            <div class="col p-5">
+                <div class="text-center">
+                    <i class="bi bi-person text-white fs-1"></i>
+                    <h1>Empleados</h1>
+                </div>
+                <h4 class="mb-4">Datos Personales</h4>
+                <!-- Datos personales -->
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <label for="Clave" class="form-label">Clave</label>
+                        <input id="Clave" class="form-control" asp-for="Clave" type="text" />
+                        <span asp-validation-for="Clave" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="APaterno" class="form-label">Apellido Paterno</label>
+                        <input id="APaterno" class="form-control" type="text" readonly/>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="AMaterno" class="form-label">Apellido Materno</label>
+                        <input id="AMaterno" class="form-control" type="text" readonly />
+                    </div>
+                    <div class="col-md-3">
+                        <label for="Nombre" class="form-label">Nombre</label>
+                        <input id="Nombre" class="form-control" type="text" readonly />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-2">
+                        <label asp-for="Puesto" class="form-label"></label>
+                        <select asp-for="Puesto" class="form-control" asp-items="Model.Puestos">
+                            <option value="">Puestos</option>
+                        </select>
+                        <span asp-validation-for="Puesto" class="text-danger"></span>
+
+                    </div>
+                    <div class="col-md-2">
+                        <label asp-for="Departamento" class="form-label"></label>
+                        <select asp-for="Departamento" class="form-control" asp-items="Model.Departamentos">
+                            <option value="">Departamentos</option>
+                        </select>
+                        <span asp-validation-for="Departamento" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="Estatus" class="form-label">Estatus</label>
+                        <input id="Estatus" class="form-control" type="text" readonly />
+                    </div>
+                    <div class="col-md-3">
+                        <label for="FIngreso" class="form-label">Fecha de Ingreso</label>
+                        <input id="FIngreso" class="form-control" asp-for="FIngreso" type="date" readonly />
+                        <span asp-validation-for="FIngreso" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-2">
+                        <label asp-for="Curso" class="form-label"></label>
+                        <select asp-for="Curso" class="form-control" asp-items="Model.Cursos">
+                            <option value="">Cursos</option>
+                        </select>
+                        <span asp-validation-for="Curso" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col mt-4 mx-5 text-center">
+                        <button type="submit" name="action" value="alta" class="btn btn-primary mb-3 px-3" style="width: 200px;">
+                            <i class="bi bi-person-plus"></i> Alta
+                        </button>
+                        <button type="submit" name="action" value="restringir" class="btn btn-danger mb-3 px-3" style="width: 200px;">
+                            <i class="bi bi-person-dash"></i> Restringir
+                        </button>
+                        <button type="submit" name="action" value="modificar" class="btn btn-light mb-3 px-3" style="width: 200px;">
+                            <i class="bi bi-pencil-square"></i> Modificar
+                        </button>
+                        <button type="submit" name="action" value="bolsa" class="btn btn-warning mb-3 px-3" style="width: 200px;">
+                            <i class="bi bi-shield-lock"></i> Redirigir a Bolsa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+</main>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("Clave").addEventListener("blur", function () {
+                const clave = this.value;
+
+                function formatFecha(fecha) {
+                    if (!fecha) return '';
+                    const date = new Date(fecha); // Convierte la cadena a un objeto Date
+
+                    const year = date.getFullYear();
+                    const month = String(date.getMonth() + 1).padStart(2, '0');  // Mes (01-12)
+                    const day = String(date.getDate()).padStart(2, '0');  // Día (01-31)
+
+                    return `${year}-${month}-${day}`; // Formato: YYYY-MM-DD
+                }
+
+
+                if (clave) {
+                    fetch(`/MantenimientoBolsa/GetBolsaByClave?clave=${clave}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data) {
+                                // Rellena los campos con los datos obtenidos
+                                document.getElementById("APaterno").value = data.aPaterno;
+                                document.getElementById("AMaterno").value = data.aMaterno;
+                                document.getElementById("Nombre").value = data.nombre;
+                                document.getElementById("Estatus").value = data.estatus;
+
+                            } else {
+                                alert("No se encontró una vacante con la clave proporcionada.");
+                            }
+                        })
+                        .catch(error => console.error('Error al obtener los datos:', error));
+                    fetch(`/MantenimientoEmpleado/GetEmpleadoByClave?clave=${clave}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data) {
+                                // Rellena los campos con los datos obtenidos
+                                document.getElementById("Departamento").value = data.departamento;
+                                document.getElementById("Puesto").value = data.puesto;
+                                document.getElementById("Curso").value = data.curso;
+                                document.getElementById("FIngreso").value = formatFecha(data.fIngreso);
+                            } else {
+                                alert("No se encontró una vacante con la clave proporcionada.");
+                            }
+                        })
+                        .catch(error => console.error('Error al obtener los datos:', error));
+                }   
+            });
+        });
+    </script>
+
+}

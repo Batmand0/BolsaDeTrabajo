@@ -1,0 +1,92 @@
+﻿/* CSS para personalizar la tarjeta */
+.contenedorCatalogos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 8px 20px rgba(0, 1, 0, 0.2); /* Sombra */
+    padding: 30px; /* Espaciado interno de 15px */
+    border-radius: 15px; /* Esquinas redondeadas */
+}
+
+.my-card {
+    background-position: center;
+    background-size: auto;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 1, 0, 0.2); /* Sombra */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+    /* Sombrado y animación al pasar el cursor */
+    .my-card:hover {
+        transform: scale(1.05);
+    }
+
+        /* Oscurecer la imagen y centrar el texto al pasar el cursor */
+        .my-card:hover .card-body {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+/* Estilos del cuerpo de la tarjeta */
+.card-body {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.card1 {
+    background: url('../images/MenuCatalogos/glenn-carstens-peters-npxXWgQ33ZQ-unsplash(1).jpg') no-repeat;
+}
+
+.card2 {
+    background: url('../images/MenuCatalogos/Cursos.jpg') no-repeat;
+}
+
+.card3 {
+    background: url('../images/MenuCatalogos/Departamento.jpg') no-repeat;
+}
+
+.card4 {
+    background: url('../images/MenuCatalogos/Documentos.jpg') no-repeat;
+}
+
+.card5 {
+    background: url('../images/MenuCatalogos/Escolaridad.jpg') no-repeat;
+}
+
+.card6 {
+    background: url('../images/MenuCatalogos/EstadoCivil.jpg') no-repeat;
+}
+
+.card7 {
+    background: url('../images/MenuCatalogos/Experiencia.jpg') no-repeat;
+}
+
+.card8 {
+    background: url('../images/MenuCatalogos/Nacionalidad.jpg') no-repeat;
+}
+
+.card9 {
+    background: url('../images/MenuCatalogos/Puesto.jpg') no-repeat;
+}
+
+.card10 {
+    background: url('../images/MenuCatalogos/Sexo.jpg') no-repeat;
+}
+
+.contenedorTexto {
+    overflow: hidden; /* Evita que el texto sobresalga del contenedor */
+    height: 100px; /* Altura del contenedor */
+}

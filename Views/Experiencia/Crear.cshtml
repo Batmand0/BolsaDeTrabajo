@@ -1,0 +1,81 @@
+﻿@model ExperienciaModel
+
+
+@{
+    ViewData["Title"] = "Asignar Experiencia";
+}
+
+<main>
+    <div class="text-center my-4">
+        <h1 class="moving-text">Catálogo de Experiencia</h1>
+        <p class="text-muted">Utiliza este formulario para gestionar la experiencia de la bolsa de trabajo.</p>
+    </div>
+
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+    <section class="container-fluid bg-gradient p-0" style="background-color: #133E87">
+        <div class="row">
+            <div class="col-4">
+                <img src="@Url.Content("~/images/MenuCatalogos/Experiencia.jpg")" alt="Demostración" class="img-fluid w-100 rounded-0" style="object-fit: cover; height: 100%;"></img>
+
+            </div>
+            <div class="col p-4 align-content-center">
+                <form method="post">
+                    <div class="row mb-3 text-white">
+                        <div class="col-md-6">
+                            <label asp-for="Clave" class="form-label"></label>
+                            <input id="Clave" class="form-control" asp-for="Clave" type="text" onblur="getDescripcion()" />
+                            <span asp-validation-for="Clave" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Descripcion" class="form-label"></label>
+                            <input id="Descripcion" class="form-control" asp-for="Descripcion" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" name="action" value="alta" class="btn btn-primary px-3" style="width: 200px;">
+                            <i class="bi bi-person-plus"></i> Alta
+                        </button>
+                        <button type="submit" name="action" value="baja" class="btn btn-danger px-3" style="width: 200px;">
+                            <i class="bi bi-person-dash"></i> Baja
+                        </button>
+                        <button type="submit" name="action" value="modificar" class="btn btn-secondary px-4" style="width: 200px;">
+                            <i class="bi bi-pencil-square"></i> Modificar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+
+        async function getDescripcion() {
+            const clave = document.getElementById('Clave').value; // Obtiene el valor de la clave del campo
+            if (clave) { // Si la clave no está vacía
+                try {
+                    // Realiza la solicitud al servidor con la clave
+                    const response = await fetch(`/Experiencia/GetDescripcion?Clave=${clave}`);
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        // Si se encuentra una descripción, llena el campo de descripción
+                        if (data) {
+                            document.getElementById('Descripcion').value = data.descripcion;
+                        } else {
+                            document.getElementById('Descripcion').value = ''; // Si no encuentra descripción, vacía el campo
+                        }
+                    } else {
+                        console.error("Error en la respuesta del servidor");
+                    }
+                } catch (error) {
+                    console.error("Error en la solicitud", error);
+                }
+            }
+        }
+    </script>
+}

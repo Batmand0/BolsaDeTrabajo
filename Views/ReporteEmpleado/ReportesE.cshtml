@@ -1,0 +1,109 @@
+﻿@using Azure.Core
+@model MantenimientoEmpleadoViewModel
+
+@{
+    ViewData["Title"] = "Reporte de Empleado";
+}
+
+<div class="container-fluid my-4">
+    <h1 class="mb-4 text-center">Reportes de Recursos Humanos</h1>
+    <main id="reporteCompleto">
+        <div class="border shadow gap-3 mb-4 p-4 text-center">
+            <!-- Filtros -->
+            <form method="get" asp-action="ReportesE">
+                <h3>Filtros</h3>
+                <section class="d-flex justify-content-around g-5">
+                    
+                    <div class="flex-grow-1 mx-3">
+                        <label class="lead">Fecha de Ingreso</label>
+                        <div>
+                            <label for="startIngreso" class="text-muted">Desde</label>
+                            <input type="date" id="startIngreso" name="startIngreso" class="form-control mt-2">
+                        </div>
+                        <div>
+                            <label for="endIngreso" class="text-muted">Hasta</label>
+                            <input type="date" id="endIngreso" name="endIngreso" class="form-control mt-2">
+                        </div>
+                    </div>
+                    <div class="flex-grow-1 mx-3">
+                        <label asp-for="Puestos" class="lead"></label><br />
+                        <label class="text-muted">Seleccione</label>
+                        <select asp-for="Puestos" class="form-control mt-2" asp-items="Model.Puestos">
+                            <option value="">Puesto</option>
+                        </select>
+                        <span asp-validation-for="Puestos" class="text-danger"></span>
+                    </div>
+                    <div class="flex-grow-1 mx-3">
+                        <label asp-for="Departamentos" class="lead"></label><br />
+                        <label class="text-muted">Seleccione</label>
+                        <select asp-for="Departamentos" class="form-control mt-2" asp-items="Model.Departamentos">
+                            <option value="">Departamento</option>
+                        </select>
+                        <span asp-validation-for="Departamentos" class="text-danger"></span>
+                    </div>
+                    <div class="flex-grow-1 mx-3">
+                        <label asp-for="Cursos" class="lead"></label><br />
+                        <label class="text-muted">Seleccione</label>
+                        <select asp-for="Cursos" class="form-control mt-2" asp-items="Model.Cursos">
+                            <option value="">Curso</option>
+                        </select>
+                        <span asp-validation-for="Cursos" class="text-danger"></span>
+                    </div>
+                </section>
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-primary" style="width: 200px">Filtrar</button>
+                </div>
+            </form>
+            <button id="exportarPDF" class="btn btn-outline-secondary mt-2" style="width: 200px">Exportar a PDF</button>
+
+
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="text-center text-white bg-gradient" style="background-color: #133E87">
+                    <tr>
+                        <th>Clave</th>
+                        <th>Nombre</th>
+                        <th>Paterno</th>
+                        <th>Materno</th>
+                        <th>Correo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Empleados)
+                    {
+                        <tr class="table-info">
+                            <td>@item.Clave</td>
+                            <td>@item.Nombre</td>
+                            <td>@item.APaterno</td>
+                            <td>@item.AMaterno</td>
+                            <td>@item.Correo</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script>
+        document.getElementById("exportarPDF").addEventListener("click", function () {
+            const reporteCompleto = document.getElementById("reporteCompleto");
+
+            const options = {
+                margin: 1,
+                filename: 'Reporte_Bolsa_Trabajo.pdf',
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'cm', format: 'a4', orientation: 'landscape' }
+            };
+
+            html2pdf().set(options).from(reporteCompleto).save();
+        });
+    </script>
+
+}
+

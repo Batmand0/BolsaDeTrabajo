@@ -1,0 +1,35 @@
+﻿
+
+.contenedor {
+    backdrop-filter: blur(12px) saturate(100%);
+    -webkit-backdrop-filter: blur(12px) saturate(100%);
+    background-color: rgba(17, 25, 30, 0.50);
+    border-radius: 12px;
+    height: 150px;
+}
+
+.textDemo{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.contenedorCards{
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+}
+
+.mycard {
+    flex: 1; /* Cada div ocupa el mismo espacio */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Opcional: borde para visualizar los divs */
+    margin: 5px; /* Espaciado externo */
+}
+
+img {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    border-radius: 25px; /* Esquinas redondeadas */
+    max-width: 100%; /* Asegura que la imagen no desborde su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}

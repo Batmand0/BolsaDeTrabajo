@@ -1,0 +1,119 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BolsaDeTrabajo
+build_property.RootNamespace = BolsaDeTrabajo
+build_property.ProjectDir = C:\Users\alexa\source\repos\BolsaDeTrabajo\BolsaDeTrabajo\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\alexa\source\repos\BolsaDeTrabajo\BolsaDeTrabajo
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Curso/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29cQ3JlYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Departamento/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Documento/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRvXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Escolaridad/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjb2xhcmlkYWRcQ3JlYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/EstadoCivil/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvQ2l2aWxcQ3JlYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Experiencia/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jaWFcQ3JlYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Horario/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb1xDcmVhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/MantenimientoBolsa/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b0JvbHNhXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/MantenimientoEmpleado/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b0VtcGxlYWRvXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/MantenimientoRestringido/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1Jlc3RyaW5naWRvXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Nacionalidad/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFjaW9uYWxpZGFkXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Perfil/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Puesto/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3RvXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/ReporteBolsa/ReportesB.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZUJvbHNhXFJlcG9ydGVzQi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/ReporteEmpleado/ReportesE.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZUVtcGxlYWRvXFJlcG9ydGVzRS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Sexo/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V4b1xDcmVhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Home/Catalogos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXRhbG9nb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-6vmvcqa7x9
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-x3ny8sbdh8
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Home/Mantenimientos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYW50ZW5pbWllbnRvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-bwxakjixdx
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Home/Reportes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXBvcnRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-ymw3nvrx0x
+
+[C:/Users/alexa/source/repos/BolsaDeTrabajo/BolsaDeTrabajo/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xvuyf6ysby

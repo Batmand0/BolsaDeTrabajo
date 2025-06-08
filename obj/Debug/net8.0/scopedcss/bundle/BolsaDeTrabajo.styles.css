@@ -1,0 +1,373 @@
+/* _content/BolsaDeTrabajo/Views/Home/Catalogos.cshtml.rz.scp.css */
+/* CSS para personalizar la tarjeta */
+.contenedorCatalogos[b-6vmvcqa7x9] {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 8px 20px rgba(0, 1, 0, 0.2); /* Sombra */
+    padding: 30px; /* Espaciado interno de 15px */
+    border-radius: 15px; /* Esquinas redondeadas */
+}
+
+.my-card[b-6vmvcqa7x9] {
+    background-position: center;
+    background-size: auto;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 1, 0, 0.2); /* Sombra */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+    /* Sombrado y animación al pasar el cursor */
+    .my-card:hover[b-6vmvcqa7x9] {
+        transform: scale(1.05);
+    }
+
+        /* Oscurecer la imagen y centrar el texto al pasar el cursor */
+        .my-card:hover .card-body[b-6vmvcqa7x9] {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+/* Estilos del cuerpo de la tarjeta */
+.card-body[b-6vmvcqa7x9] {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.card1[b-6vmvcqa7x9] {
+    background: url('../images/MenuCatalogos/glenn-carstens-peters-npxXWgQ33ZQ-unsplash(1).jpg') no-repeat;
+}
+
+.card2[b-6vmvcqa7x9] {
+    background: url('../images/MenuCatalogos/Cursos.jpg') no-repeat;
+}
+
+.card3[b-6vmvcqa7x9] {
+    background: url('../images/MenuCatalogos/Departamento.jpg') no-repeat;
+}
+
+.card4[b-6vmvcqa7x9] {
+    background: url('../images/MenuCatalogos/Documentos.jpg') no-repeat;
+}
+
+.card5[b-6vmvcqa7x9] {
+    background: url('../images/MenuCatalogos/Escolaridad.jpg') no-repeat;
+}
+
+.card6[b-6vmvcqa7x9] {
+    background: url('../images/MenuCatalogos/EstadoCivil.jpg') no-repeat;
+}
+
+.card7[b-6vmvcqa7x9] {
+    background: url('../images/MenuCatalogos/Experiencia.jpg') no-repeat;
+}
+
+.card8[b-6vmvcqa7x9] {
+    background: url('../images/MenuCatalogos/Nacionalidad.jpg') no-repeat;
+}
+
+.card9[b-6vmvcqa7x9] {
+    background: url('../images/MenuCatalogos/Puesto.jpg') no-repeat;
+}
+
+.card10[b-6vmvcqa7x9] {
+    background: url('../images/MenuCatalogos/Sexo.jpg') no-repeat;
+}
+
+.contenedorTexto[b-6vmvcqa7x9] {
+    overflow: hidden; /* Evita que el texto sobresalga del contenedor */
+    height: 100px; /* Altura del contenedor */
+}
+/* _content/BolsaDeTrabajo/Views/Home/Index.cshtml.rz.scp.css */
+
+
+.contenedor[b-x3ny8sbdh8] {
+    backdrop-filter: blur(12px) saturate(100%);
+    -webkit-backdrop-filter: blur(12px) saturate(100%);
+    background-color: rgba(17, 25, 30, 0.50);
+    border-radius: 12px;
+    height: 150px;
+}
+
+.textDemo[b-x3ny8sbdh8]{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.contenedorCards[b-x3ny8sbdh8]{
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+}
+
+.mycard[b-x3ny8sbdh8] {
+    flex: 1; /* Cada div ocupa el mismo espacio */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Opcional: borde para visualizar los divs */
+    margin: 5px; /* Espaciado externo */
+}
+
+img[b-x3ny8sbdh8] {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    border-radius: 25px; /* Esquinas redondeadas */
+    max-width: 100%; /* Asegura que la imagen no desborde su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+/* _content/BolsaDeTrabajo/Views/Home/Mantenimientos.cshtml.rz.scp.css */
+/* CSS para personalizar la tarjeta */
+.contenedorCatalogos[b-bwxakjixdx] {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 8px 20px rgba(0, 1, 0, 0.2); /* Sombra */
+    padding: 30px; /* Espaciado interno de 15px */
+    border-radius: 15px; /* Esquinas redondeadas */
+}
+
+.my-card[b-bwxakjixdx] {
+    background-position: center;
+    background-size: auto;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 1, 0, 0.2); /* Sombra */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+    /* Sombrado y animación al pasar el cursor */
+    .my-card:hover[b-bwxakjixdx] {
+        transform: scale(1.05);
+    }
+
+        /* Oscurecer la imagen y centrar el texto al pasar el cursor */
+        .my-card:hover .card-body[b-bwxakjixdx] {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+/* Estilos del cuerpo de la tarjeta */
+.card-body[b-bwxakjixdx] {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.card1[b-bwxakjixdx] {
+    background: url('../images/MenuCatalogos/glenn-carstens-peters-npxXWgQ33ZQ-unsplash(1).jpg') no-repeat;
+}
+
+.card2[b-bwxakjixdx] {
+    background: url('../images/MenuCatalogos/Cursos.jpg') no-repeat;
+}
+
+.card3[b-bwxakjixdx] {
+    background: url('../images/MenuCatalogos/Departamento.jpg') no-repeat;
+}
+
+.card4[b-bwxakjixdx] {
+    background: url('../images/MenuCatalogos/Documentos.jpg') no-repeat;
+}
+
+.card5[b-bwxakjixdx] {
+    background: url('../images/MenuCatalogos/Escolaridad.jpg') no-repeat;
+}
+
+.card6[b-bwxakjixdx] {
+    background: url('../images/MenuCatalogos/EstadoCivil.jpg') no-repeat;
+}
+
+.card7[b-bwxakjixdx] {
+    background: url('../images/MenuCatalogos/Experiencia.jpg') no-repeat;
+}
+
+.card8[b-bwxakjixdx] {
+    background: url('../images/MenuCatalogos/Nacionalidad.jpg') no-repeat;
+}
+
+.card9[b-bwxakjixdx] {
+    background: url('../images/MenuCatalogos/Puesto.jpg') no-repeat;
+}
+
+.card10[b-bwxakjixdx] {
+    background: url('../images/MenuCatalogos/Sexo.jpg') no-repeat;
+}
+
+.contenedorTexto[b-bwxakjixdx] {
+    overflow: hidden; /* Evita que el texto sobresalga del contenedor */
+    height: 100px; /* Altura del contenedor */
+}
+/* _content/BolsaDeTrabajo/Views/Home/Reportes.cshtml.rz.scp.css */
+/* CSS para personalizar la tarjeta */
+.contenedorCatalogos[b-ymw3nvrx0x] {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 8px 20px rgba(0, 1, 0, 0.2); /* Sombra */
+    padding: 30px; /* Espaciado interno de 15px */
+    border-radius: 15px; /* Esquinas redondeadas */
+}
+
+.my-card[b-ymw3nvrx0x] {
+    background-position: center;
+    background-size: auto;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 1, 0, 0.2); /* Sombra */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+    /* Sombrado y animación al pasar el cursor */
+    .my-card:hover[b-ymw3nvrx0x] {
+        transform: scale(1.05);
+    }
+
+        /* Oscurecer la imagen y centrar el texto al pasar el cursor */
+        .my-card:hover .card-body[b-ymw3nvrx0x] {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+/* Estilos del cuerpo de la tarjeta */
+.card-body[b-ymw3nvrx0x] {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.card1[b-ymw3nvrx0x] {
+    background: url('../images/MenuCatalogos/glenn-carstens-peters-npxXWgQ33ZQ-unsplash(1).jpg') no-repeat;
+}
+
+.card2[b-ymw3nvrx0x] {
+    background: url('../images/MenuCatalogos/Cursos.jpg') no-repeat;
+}
+
+.card3[b-ymw3nvrx0x] {
+    background: url('../images/MenuCatalogos/Departamento.jpg') no-repeat;
+}
+
+.card4[b-ymw3nvrx0x] {
+    background: url('../images/MenuCatalogos/Documentos.jpg') no-repeat;
+}
+
+.card5[b-ymw3nvrx0x] {
+    background: url('../images/MenuCatalogos/Escolaridad.jpg') no-repeat;
+}
+
+.card6[b-ymw3nvrx0x] {
+    background: url('../images/MenuCatalogos/EstadoCivil.jpg') no-repeat;
+}
+
+.card7[b-ymw3nvrx0x] {
+    background: url('../images/MenuCatalogos/Experiencia.jpg') no-repeat;
+}
+
+.card8[b-ymw3nvrx0x] {
+    background: url('../images/MenuCatalogos/Nacionalidad.jpg') no-repeat;
+}
+
+.card9[b-ymw3nvrx0x] {
+    background: url('../images/MenuCatalogos/Puesto.jpg') no-repeat;
+}
+
+.card10[b-ymw3nvrx0x] {
+    background: url('../images/MenuCatalogos/Sexo.jpg') no-repeat;
+}
+
+.contenedorTexto[b-ymw3nvrx0x] {
+    overflow: hidden; /* Evita que el texto sobresalga del contenedor */
+    height: 100px; /* Altura del contenedor */
+}
+/* _content/BolsaDeTrabajo/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+.navbar-transparent[b-xvuyf6ysby] {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-scrolled[b-xvuyf6ysby] {
+    background-color: white;
+}
+
+    a .navbar-brand[b-xvuyf6ysby] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-xvuyf6ysby] {
+  color: #0077cc;
+}
+
+.btn-primary[b-xvuyf6ysby] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-xvuyf6ysby], .nav-pills .show > .nav-link[b-xvuyf6ysby] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-xvuyf6ysby] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-xvuyf6ysby] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-xvuyf6ysby] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-xvuyf6ysby] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-xvuyf6ysby] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+

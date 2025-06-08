@@ -1,0 +1,85 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* Estilo personalizado para la transición y efecto hover */
+#BolsaCard {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+    #BolsaCard:hover {
+        transform: scale(1.05); /* Expande la tarjeta un 5% */
+        background-color: #228B22 !important; /* Cambia el fondo al color forestgreen */
+        color: #ffffff !important; /* Cambia el texto a color blanco */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más fuerte en hover */
+    }
+
+/* Estilo personalizado para la transición y efecto hover */
+#EmpleadoCard {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+#EmpleadoCard:hover {
+    transform: scale(1.05); /* Expande la tarjeta un 5% */
+    background-color: #133E87 !important; /* Cambia el fondo al color forestgreen */
+    color: #ffffff !important; /* Cambia el texto a color blanco */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más fuerte en hover */
+}
+
+/* Estilo personalizado para la transición y efecto hover */
+#MuertoCard {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+    #MuertoCard:hover {
+        transform: scale(1.05); /* Expande la tarjeta un 5% */
+        background-color: darkred !important; /* Cambia el fondo al color forestgreen */
+        color: #ffffff !important; /* Cambia el texto a color blanco */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más fuerte en hover */
+    }
+
+.moving-text {
+    position: relative;
+    animation: move 1s ease-in-out; /* Llama a la animación 'move' */
+}
+
+/* Define la animación */
+@keyframes move {
+    from {
+        transform: translateY(-50px); /* Comienza 50px arriba */
+        opacity: 0; /* Comienza completamente transparente */
+    }
+
+    to {
+        transform: translateY(0); /* Se desplaza a su posición original */
+        opacity: 1; /* Se vuelve completamente visible */
+    }
+}
+
+#Fondo {
+    background-image: url(../images/MenuCatalogos/Cursos.jpg);
+    background-size: cover; /* Ajusta la imagen para ocupar todo el espacio */
+    background-repeat: no-repeat; /* Evita que se repita la imagen */
+    background-position: center; /* Centra la imagen */
+    background-color: rgba(0, 0, 0, 0.5); /* Superposición semitransparente negra */
+    background-blend-mode: darken; /* Combina el color de fondo con la imagen */
+}

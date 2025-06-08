@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Menu de Mantenimientos";
+}
+<div style="background-color: #133E87;">
+    <h1 style="text-align: center" class="moving-text pb-2 text-white">Mantenimientos</h1>
+    <h5 class="text-center text-white pb-3 moving-text">El espacio en donde podras dirigirte a cualquier mantenimiento de tu empresa</h5>
+</div>
+
+
+<div class="contenedorCatalogos py-5">
+    <a href="@Url.Action("Crear", "MantenimientoBolsa")">
+        <div class="card my-card shadow rounded card1" style="width: 15rem; height: 15rem">
+            <div class="card-body">
+                <p class="card-text">Mantenimiento de Bolsa</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Crear", "MantenimientoEmpleado")">
+        <div class="card my-card shadow rounded card2" style="width: 15rem; height: 15rem">
+            <div class="card-body">
+                <p class="card-text">Mantenimiento de Empleado</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Crear", "MantenimientoRestringido")">
+        <div class="card my-card shadow rounded card3" style="width: 15rem; height: 15rem">
+            <div class="card-body">
+                <p class="card-text">Mantenimiento de Restricción</p>
+            </div>
+        </div>
+    </a>
+</div>
